@@ -1,0 +1,41 @@
+<!--miniprogram/pages/home_center/common_panel/index.js.wxml-->
+<wxs src="./index.wxs" module="utils" />
+
+<image style="width: 750rpx; height: 875rpx; display: block; box-sizing: border-box; left: 0rpx; top: 57rpx; position: absolute"  class="common-panel-backgroud" src="{{forest}}" />
+<navbar device_name="{{device_name}}" bind:jumpTodeviceEditPage="jumpTodeviceEditPage" />
+
+
+
+<block wx:if="{{isRoDpListShow}}">
+  <view class="statuslist">
+    <block wx:for="{{roDpList}}" wx:key="{{item.code}}" wx:for-item="item" wx:for-index='idx'>
+      <view class="{{utils.countDpItem(roDpListLength,idx)}}">
+        <view class="roDpItem-dpName">{{item.code}}</view>
+        <view class="roDpItem-status">{{item.value}}</view>
+      </view>
+    </block>
+  </view>
+</block>
+<button style="position: relative; left: -242rpx; top: 1088rpx">开关</button>
+<button style="position: relative; left: -11rpx; top: 1004rpx">定时</button>
+<button style="position: relative; left: 237rpx; top: 920rpx">用电量</button>
+>
+<image style="position: relative; left: 563rpx; top: 700rpx; width: 100rpx; height: 100rpx; display: block; box-sizing: border-box" src="/image/时间.png" />
+<image style="position: relative; left: 94rpx; top: 600rpx; width: 100rpx; height: 100rpx; display: block; box-sizing: border-box" src="/image/close.png" />
+<image style="position: relative; left: 326rpx; top: 500rpx; width: 100rpx; height: 100rpx; display: block; box-sizing: border-box" src="/image/time2.png" />
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
